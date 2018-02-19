@@ -26,11 +26,11 @@ public class ArrayUtilsTest {
     public void removeValueTest1() {
         // Given
         Integer valueToRemove = 7;
-        Integer[] expected = {1, 2, 8, 4, 5, 0, 9, 8};
-        Integer[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
+        Object[] expected = {1, 2, 8, 4, 5, 0, 9, 8};
+        Object[] inputArray = {1, 2, 7, 8, 4, 5, 7, 0, 9, 8, 7};
 
         // When
-        Integer[] actual = (Integer[]) ArrayUtils.removeValue(inputArray, valueToRemove);
+        Object[] actual = (Object[]) ArrayUtils.removeValue(inputArray, valueToRemove);
 
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);
@@ -66,12 +66,12 @@ public class ArrayUtilsTest {
     @Test
     public void mergeArraysTest() {
         // Given
-        Integer[] array1 = {1,1,1,2,2,2};
-        Integer[] array2 = {3,3,3,4,4,4};
-        Integer[] expected = {1,1,1,2,2,2,3,3,3,4,4,4};
+        Object[] array1 = {1,1,1,2,2,2};
+        Object[] array2 = {3,3,3,4,4,4};
+        Object[] expected = {1,1,1,2,2,2,3,3,3,4,4,4};
 
         // When
-        Integer[] actual = (Integer[]) ArrayUtils.mergeArrays(array1, array2);
+        Object[] actual =  ArrayUtils.mergeArrays(array1, array2);
 
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);

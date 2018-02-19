@@ -13,7 +13,13 @@ public class RockPaperSissorsEvaluator {
      * @return the respective winning move
      */
     public String getWinningMove(String handSign) {
-        return null;
+        if (handSign.equals(RockPaperSissorsEvaluator.ROCK)) {
+            return RockPaperSissorsEvaluator.PAPER;
+        } else if (handSign.equals(RockPaperSissorsEvaluator.PAPER)) {
+            return RockPaperSissorsEvaluator.SCISSOR;
+        }
+
+        return RockPaperSissorsEvaluator.ROCK;
     }
 
     /**
@@ -21,8 +27,15 @@ public class RockPaperSissorsEvaluator {
      * @return the respective losing move
      */
     public String getLosingMove(String handSign) {
-        return null;
+        if (handSign.equals(RockPaperSissorsEvaluator.ROCK)) {
+            return RockPaperSissorsEvaluator.SCISSOR;
+        } else if (handSign.equals(RockPaperSissorsEvaluator.PAPER)) {
+            return RockPaperSissorsEvaluator.ROCK;
+        }
+
+        return RockPaperSissorsEvaluator.PAPER;
     }
+
 
     /**
      * @param handSignOfPlayer1 a string representative of a hand sign of a player
@@ -30,6 +43,12 @@ public class RockPaperSissorsEvaluator {
      * @return a string representative of the winning hand sign between the two players
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
-        return null;
+        //What happens if they both tie how Do I have to go at it again
+
+        if (handSignOfPlayer1.equals(getWinningMove(handSignOfPlayer2))) {
+            return handSignOfPlayer1;
+        }
+        return handSignOfPlayer2;
+
     }
 }

@@ -11,7 +11,7 @@ public class IntegerUtilsTest {
     public void getSumTest() {
         // : Given
         Integer input = 5;
-        Integer expected = 12;
+        Integer expected = 10;
 
         // : When
         Integer actual = IntegerUtils.getSumOfN(input);
@@ -24,7 +24,7 @@ public class IntegerUtilsTest {
     public void testGetProduct() {
         // : Given
         Integer input = 5;
-        Integer expected = 120;
+        Integer expected = 24;
 
         // : When
         Integer actual = IntegerUtils.getProductOfN(input);
